@@ -3,18 +3,94 @@
 <head>
     <style>
         body {
+            background: #121212;
             margin: 0;
             padding: 0;
         }
-        .gif-container {
-            width: 100%;
-            height: 100%;
+        #loader {
+            width: 500px;
+            position: absolute;
+            text-align: center;
+            left: calc(50% - 250px);
+            top: calc(50% - 10px);
+        }
+        #loader .square {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 10px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+            animation: bouncer cubic-bezier(.455, .03, .515, .955) .75s infinite alternate;
+        }
+        #loader .square:nth-child(5n+1) {
+            background: #0F9;
+            animation-delay: 0;
+        }
+        #loader .square:nth-child(5n+2) {
+            background: #0CF;
+            animation-delay: calc(0s + (.1s * 1));
+        }
+        #loader .square:nth-child(5n+3) {
+            background: #93F;
+            animation-delay: calc(0s + (.1s * 2));
+        }
+        #loader .square:nth-child(5n+4) {
+            background: #F66;
+            animation-delay: calc(0s + (.1s * 3));
+        }
+        #loader .square:nth-child(5n+5) {
+            background: #FFF35C;
+            animation-delay: calc(0s + (.1s * 4));
+        }
+        @keyframes bouncer {
+            to {
+                transform: scale(1.75) translateY(-20px);
+            }
         }
     </style>
 </head>
-<body>
-    <div class="gif-container">
-        <img src="/Webpage/HopOnArk/assets/images/IslandBoysHopOnARK.gif" alt="Island Boys Hop On ARK">
+<body itemscope itemtype="http://schema.org/WebPage">
+    <div id="loader">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class "square"></div>
+        <div class="square"></div>
+    </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://giphy.com/gifs/ark-survival-ascended-hop-on-q8UvJKqCxYH1ESKXml"
+            },
+            "headline": "Kissing GIF",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4NzFlNGcya2lmcTg3ZzMzZXgwcW1xcWZhc2hkcTB2enRlbWV2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnl_faWQmY3Q9Zw/q8UvJKqCxYH1ESKXml/giphy.gif",
+                "height": "480",
+                "width": "272"
+            },
+            "datePublished": "2023-10-26T20:10:43+0000",
+            "publisher": {
+                "@type": "Organization",
+                "name": "GIPHY",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://giphy.com/static/img/giphy-be-animated-logo.gif",
+                    "width": "300",
+                    "height": "300"
+                }
+            }
+        }
+    </script>
+
+    <div id="metadata-example"></div>
+    <div id="messages">
+        <!-- Add any additional content or messages here -->
     </div>
 </body>
 </html>
