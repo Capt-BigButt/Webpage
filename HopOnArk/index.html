@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <style>
         body {
@@ -8,33 +8,28 @@
             overflow: hidden;
             position: relative;
         }
-        .gif {
+
+        .gif-container {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWg1N3ZiMzQ4MjB2ODR4b3dldG1hc2huN2phZXhtOWdibjVzcjhvZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q8UvJKqCxYH1ESKXml/giphy.gif') top left / cover no-repeat;
+            animation: moveRight 10s linear infinite;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <script>
-        const gifUrl = 'https://giphy.com/embed/q8UvJKqCxYH1ESKXml';
-        const gifWidth = 100; // Width of the GIF
-        const gifHeight = 100; // Height of the GIF
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        for (let y = 0; y < screenHeight; y += gifHeight) {
-            for (let x = 0; x < screenWidth; x += gifWidth) {
-                const gif = document.createElement('iframe');
-                gif.src = gifUrl;
-                gif.className = 'gif';
-                gif.style.width = gifWidth + 'px';
-                gif.style.height = gifHeight + 'px';
-                gif.style.top = y + 'px';
-                gif.style.left = x + 'px';
-                document.body.appendChild(gif);
-            }
-        }
-    </script>
+    <div class="gif-container"></div>
 </body>
 </html>
