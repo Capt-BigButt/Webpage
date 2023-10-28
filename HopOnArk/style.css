@@ -1,11 +1,4 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background: url('/Webpage/HopOnArk/assets/images/IslandBoysHopOnARK.gif');
-    background-size: cover;
-    background-repeat: repeat;
+    background-image: url('smaller.gif'); /* Replace with the correct path to your smaller GIF */
+    background-repeat: repeat; /* Tiles the background image */
 }
