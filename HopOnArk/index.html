@@ -8,12 +8,26 @@
             overflow: hidden;
             position: relative;
         }
+        .gif-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/docs/assets/images/IslandBoysHopOnARK.gif') top left / cover no-repeat;
+            animation: moveRight 10s linear infinite;
+        }
+        @keyframes moveRight {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="tenor-gif-embed" data-postid="5396718719077913451" data-share-method="host" data-aspect-ratio="0.570281" data-width="100%">
-        <a href="https://tenor.com/view/ark-ark-survival-ascended-hop-on-ark-island-boy-gif-5396718719077913451">Ark Ark Survival Ascended GIF</a> from <a href="https://tenor.com/search/ark-gifs">Ark GIFs</a>
-    </div>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <div class="gif-container"></div>
 </body>
 </html>
