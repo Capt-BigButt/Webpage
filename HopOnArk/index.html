@@ -6,30 +6,10 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            position: relative;
-        }
-
-        .gif-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWg1N3ZiMzQ4MjB2ODR4b3dldG1hc2huN2phZXhtOWdibjVzcjhvZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/q8UvJKqCxYH1ESKXml/giphy.gif') top left / auto 100%;
-            animation: moveRight 10s linear infinite;
-        }
-
-        @keyframes moveRight {
-            0% {
-                left: 0;
-            }
-            100% {
-                left: 100%;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="gif-container"></div>
+    <iframe src="https://giphy.com/embed/q8UvJKqCxYH1ESKXml" frameborder="0" allowfullscreen style="width: 100%; height: 100%; position: fixed; top: 0; left: 0;"></iframe>
 </body>
 </html>
