@@ -1,4 +1,7 @@
 body {
     background-image: url('smaller.gif'); /* Replace with the correct path to your smaller GIF */
-    background-repeat: repeat; /* Tiles the background image */
+    background-repeat: repeat; /* Tiling the background image */
+    background-size: auto; /* Preserve the original size of the GIF */
+    width: 100%;
+    height: 100vh; /* Ensure the background covers the entire viewport height */
 }
