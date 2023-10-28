@@ -1,2 +1,3 @@
 # http://Capt-BigButt.github.io/Webpage/
-![image](/assets/images/IslandBoysHopOnARK.gif)
+import img from './assets/images/your-image.jpg'
+<img src={img} />
