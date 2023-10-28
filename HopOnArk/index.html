@@ -7,9 +7,23 @@
             padding: 0;
             overflow: hidden;
         }
+        .gif-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
-    <iframe src="https://giphy.com/embed/q8UvJKqCxYH1ESKXml" frameborder="0" allowfullscreen style="width: 100%; height: 100%; position: fixed; top: 0; left: 0;"></iframe>
+    <div class="gif-container">
+        <iframe src="https://giphy.com/embed/q8UvJKqCxYH1ESKXml" frameborder="0" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
