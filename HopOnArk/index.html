@@ -6,43 +6,35 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            position: relative;
         }
-        .gif-container {
+        .gif {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100px; /* Adjust the width and height to control the size of each GIF */
-            height: 100px;
-            z-index: -1;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
         }
     </style>
 </head>
 <body>
     <script>
-        const gifWidth = 100; // Width of each GIF
-        const gifHeight = 100; // Height of each GIF
+        const gifUrl = 'https://giphy.com/embed/q8UvJKqCxYH1ESKXml';
+        const gifWidth = 100; // Width of the GIF
+        const gifHeight = 100; // Height of the GIF
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
 
         for (let y = 0; y < screenHeight; y += gifHeight) {
             for (let x = 0; x < screenWidth; x += gifWidth) {
-                const gifContainer = document.createElement('div');
-                gifContainer.className = 'gif-container';
-                gifContainer.style.top = y + 'px';
-                gifContainer.style.left = x + 'px';
-                const iframe = document.createElement('iframe');
-                iframe.src = 'https://giphy.com/embed/q8UvJKqCxYH1ESKXml';
-                iframe.frameborder = '0';
-                iframe.allowfullscreen = true;
-                gifContainer.appendChild(iframe);
-                document.body.appendChild(gifContainer);
+                const gif = document.createElement('iframe');
+                gif.src = gifUrl;
+                gif.className = 'gif';
+                gif.style.width = gifWidth + 'px';
+                gif.style.height = gifHeight + 'px';
+                gif.style.top = y + 'px';
+                gif.style.left = x + 'px';
+                document.body.appendChild(gif);
             }
         }
     </script>
-    <p><a href="https://giphy.com/gifs/ark-survival-ascended-hop-on-q8UvJKqCxYH1ESKXml">via GIPHY</a></p>
 </body>
 </html>
