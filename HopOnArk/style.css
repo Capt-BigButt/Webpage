@@ -1,7 +1,7 @@
 body {
     background-image: url('assets/images/IslandBoysHopOnARK.gif');
     background-repeat: repeat;
-    background-size: 60px 70px; /* Adjust size as needed */
+    background-size: 10% 10%; /* Adjust the percentage values as needed */
     width: 100%;
     height: 100vh;
 }
