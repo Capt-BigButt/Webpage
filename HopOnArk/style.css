@@ -8,7 +8,7 @@ body {
 
 .click-flash {
     position: absolute;
-    width: 40px; /* Adjust the size as needed */
-    height: 60px; /* Adjust the size as needed */
+    width: 60px; /* Adjust the size as needed */
+    height: 75px; /* Adjust the size as needed */
     pointer-events: none; /* To allow clicks to pass through the flash image */
 }
