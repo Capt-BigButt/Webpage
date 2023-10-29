@@ -1,7 +1,14 @@
 body {
     background-image: url('assets/images/IslandBoysHopOnARK.gif');
     background-repeat: repeat;
-    background-size: 5%; /* Adjust the percentage value to scale it down */
+    background-size: 5%; /* Adjust the percentage value to scale it down to 70% of its original size */
     width: 100%;
     height: 100vh;
+}
+
+.click-flash {
+    position: absolute;
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    pointer-events: none; /* To allow clicks to pass through the flash image */
 }
