@@ -6,9 +6,9 @@ body {
     height: 100vh;
 }
 
-.click-flash {
-    position: absolute;
-    width: 65px; /* Adjust the size as needed */
-    height: 75px; /* Adjust the size as needed */
-    pointer-events: none; /* To allow clicks to pass through the flash image */
+.cursor-gif {
+    position: fixed;
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+    pointer-events: none; /* Allows the cursor to be interactive through the GIF */
 }
