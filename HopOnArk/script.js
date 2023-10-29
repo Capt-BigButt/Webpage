@@ -14,5 +14,5 @@ document.addEventListener("click", function(event) {
     // Remove the flash image after a short delay (e.g., 500ms)
     setTimeout(function() {
         document.body.removeChild(flashImage);
-    }, 500);
+    }, 1000);
 });
