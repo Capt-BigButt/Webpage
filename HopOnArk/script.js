@@ -1,18 +1,16 @@
-document.addEventListener("click", function(event) {
-    // Create an image element for the flash effect
-    var flashImage = document.createElement("img");
-    flashImage.src = 'assets/images/IslandBoysHopOnARK.gif'; // Replace with your GIF path
-    flashImage.className = 'click-flash'; // You can style this class in your CSS
+const cursorTrail = document.getElementById('cursor-trail');
+const cursorGif = 'assets/images/IslandBoysHopOnARK.gif';
 
-    // Set the position of the flash at the click coordinates
-    flashImage.style.left = (event.clientX - 50) + "px"; // Adjust as needed
-    flashImage.style.top = (event.clientY - 50) + "px"; // Adjust as needed
+document.addEventListener('mousemove', (e) => {
+    const img = new Image();
+    img.src = cursorGif;
+    img.classList.add('cursor-gif');
+    img.style.left = e.pageX + 'px';
+    img.style.top = e.pageY + 'px';
+    cursorTrail.appendChild(img);
 
-    // Append the flash image to the body
-    document.body.appendChild(flashImage);
-
-    // Remove the flash image after a short delay (e.g., 500ms)
-    setTimeout(function() {
-        document.body.removeChild(flashImage);
+    // Remove the image after a certain time (e.g., 1 second)
+    setTimeout(() => {
+        cursorTrail.removeChild(img);
     }, 1000);
 });
