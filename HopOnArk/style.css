@@ -1,5 +1,5 @@
 body {
-    background-image: url('IslandBoysHopOnARK.gif'); /* Replace with the correct path to your GIF */
+    background-image: url('HopOnArk/assets/images/IslandBoysHopOnARK.gif'); /* Replace with the correct path to your GIF */
     background-repeat: repeat; /* Tiling the background image */
     background-size: 50px 50px; /* Set the size of each tile (adjust the values as needed) */
     width: 100%;
